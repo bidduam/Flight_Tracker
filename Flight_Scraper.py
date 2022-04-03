@@ -20,7 +20,7 @@ options.add_argument("--headless")
 driver = webdriver.Chrome(chrome_options=options, executable_path=r"C:\Users\chris\Downloads\chromedriver_win32\chromedriver.exe")
 driver.get(r"https://www.google.com/travel/explore?tfs=CBwQAxoaagwIAhIIL20vMDJjbDESCjIwMjItMDQtMTUaGhIKMjAyMi0wNC0xOXIMCAISCC9tLzAyY2wxcAKCAQsI____________AUABSAGYAQGyAQQYASAB&tfu=GiwaKAoSCTGwzB_9KE5AEUdDRWpYb0hAEhIJSBnode8mQkAR4_LqVp5AKMAgAw")
 wait = WebDriverWait(driver,10)
-titles = wait.until(EC.presence_of_element_located((By.ID, 'yDmH0d')))
+titles = wait.until(EC.text_to_be_present_in_element((By.ID, 'yDmH0d'),'About'))
 
 #Scrape Chrome for element text for each city in XPATHs_List list.
 elementtext = (driver.find_element(by=By.ID, value =id).text).replace("\n", "> ").split('> ')[20:]
@@ -32,7 +32,7 @@ city            = destlist[0::5]
 dates           = destlist[1::5]
 stops           = destlist[2::5]
 flighttime      = destlist[3::5]
-price          = destlist[4::5]    
+price           = destlist[4::5]    
 
 keynum = range(len(destlist[0::5]))
 
