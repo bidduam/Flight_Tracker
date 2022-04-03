@@ -1,0 +1,59 @@
+Class and Inner Class creation
+
+#We want to create 5 different classes that will be placed inside the overarching
+'Destinations' class. 
+
+#Example Object
+c1 = Destination(city[0],dates[0], stopcount[0], flighttime[0], price[0]
+c1 = Destination('Dublin', 'Aug 22–28', '1 stop', '14 hr', '$550')
+
+city            = destlist[0::5]
+dates           = destlist[1::5]
+stops           = destlist[2::5]
+flighttime      = destlist[3::5]
+price          = destlist[4::5]    
+
+#Different Classes - Below we have City, Dates, Stops, FlightTime, Prices as classes
+class City:
+    def __init__(self):
+        self.city    =    destlist[0::5]
+
+class Dates:
+    def __init__(self):
+        self.dates    =    destlist[1::5]
+
+class Stops:
+    def __init__(self):
+        self.stopcount    =    destlist[2::5]
+
+class FlightTime:
+    def __init__(self):
+        self.flighttime    =    destlist[3::5]
+
+class Prices:
+    def __init__(self):
+        self.price    =    destlist[4::5]
+
+
+#Variables - Cities, Dates, # of Stops, and Price 
+#These are the values for the class
+class Destinations:
+    def __init__(self, city, dates, stops, flighttime, price):
+        self.city            = destlist[0::5]
+        self.dates           = destlist[1::5]
+        self.stops           = destlist[2::5]
+        self.flighttime      = destlist[3::5]
+        self.price          = destlist[4::5]
+
+#Method Ideas
+    -Filter by:
+        -CityName
+        -MaxPrice
+        -MaxFlightTime
+        -MaxStops
+        -DateRange
+
+#CityName filter
+    def city(self):
+        if self.city = self
+            print(self.city, self.dates, self.stops, self.flighttime, self.price)
